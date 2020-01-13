@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试</title>
+    <style>
+        * {box-sizing: border-box;margin: 0;padding: 0;}
+        *::before,*::after {box-sizing: border-box;}
+        /*让皮卡丘固定在屏幕中间*/
+        #html {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50vh;
+        }
+        /*demo2用来让css生效，所以可以隐藏*/
+        #demo2 {
+            display: none;
+        }
+        /*写的css定位，有一个滚动条*/
+        #demo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 50vh;
+            width: 100%;
+            border:1px solid red;
+            /*添加滚动条 */
+            overflow: scroll;
+        }
+        /*隐藏滚动条，用户依旧可以滚*/
+        #demo::-webkit-scrollbar {
+            display: none;
+        }
+        #buttons {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        #buttons>button {
+            margin-bottom: 10px;
+            padding: 4px 8px;
+        }
+    </style>
+</head>
+<body>
+<div id = "demo"></div>
+<style id = "demo2"></style>
+<div id = "buttons">
+    <button id = "btnPause">暂停</button>
+    <button id = "btnPlay">播放</button>
+    <button id = "btnSlow">慢速</button>
+    <button id = "btnNormal">中速</button>
+    <button id = "btnFast">快速</button>
+</div>
+<div id = "html">
+    <div class="skin">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="nose">
+            <div class = "yuan"></div>
+        </div>
+        <div class="mouth">
+            <div class = "up">
+                <div class="lip left"></div>
+                <div class = "lip right"></div>
+            </div>
+            <div class = "down">
+                <div class="yuan1">
+                    <div class="yuan2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script  type = "module" src = "text.js"></script>
+</body>
+</html>
