@@ -19,7 +19,7 @@ let timerId = setInterval(function(){
     play()
 },time);
 btnPause.onclick = () => {
-  clearInterval(timerId)
+    clearInterval(timerId)
 };
 btnPlay.onclick = () => {
     timerId = setInterval(function(){
